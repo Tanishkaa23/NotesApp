@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note - Notes App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <nav class="bg-gray-800 p-4 shadow-md mb-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo text-3xl font-bold text-blue-400">
+                <h1>Notes App</h1>
+            </div>
+            <div class="links space-x-6 text-xl">
+                <a href="/" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
+                <a href="/new" class="text-gray-300 hover:text-blue-400 transition duration-300">Create Notes</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-8">
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-3xl font-bold mb-6 text-blue-400">Edit Note</h2>
+            <form action="/edit-note/<%= oldName %>" method="get" class="space-y-6">
+                <div class="space-y-2">
+                    <label for="title" class="text-xl text-blue-300">Note Title</label>
+                    <input type="text" id="title" name="title" value="<%= oldName %>" class="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-xl text-gray-100 focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="space-y-2">
+                    <label for="content" class="text-xl text-blue-300">Note Description</label>
+                    <textarea id="content" name="content" class="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-xl text-gray-100 resize-none h-48 focus:outline-none focus:border-blue-500"><%= content %></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg text-xl transition duration-300">
+                        Update Note <i class="ri-save-line ml-2"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

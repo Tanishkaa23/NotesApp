@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= fileTitle %> - Notes App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <nav class="bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo text-3xl font-bold text-blue-400">
+                <h1>Notes App</h1>
+            </div>
+            <div class="links space-x-6 text-xl">
+                <a href="/" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
+                <a href="/new" class="text-gray-300 hover:text-blue-400 transition duration-300">Create Notes</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-8">
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <h1 class="text-4xl font-bold text-blue-400 mb-4"><%= fileTitle %></h1>
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <p class="text-xl leading-relaxed whitespace-pre-wrap"><%= fileData %></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

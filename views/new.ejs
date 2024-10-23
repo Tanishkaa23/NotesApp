@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Note</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 p-5">
+    <nav class="flex justify-between bg-gray-800 p-3 items-center rounded-lg">
+        <div class="logo text-3xl">
+            <h1 class="text-blue-400">Notes App</h1>
+        </div>
+        <div class="links flex gap-9 text-xl">
+            <a href="/" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
+            <a href="/new" class="text-gray-300 hover:text-blue-400 transition duration-300">Create Notes</a>
+        </div>
+    </nav>
+    <div class="form-container flex items-center justify-center p-5 mt-20">
+        <form action="/create-note" method="get" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+           <div class="inp flex flex-col gap-2">
+            <label class="text-2xl text-blue-400">Note Title</label>
+            <input type="text" name="title" placeholder="Note Title" class="bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-xl text-gray-100 focus:outline-none focus:border-blue-500">
+           </div>
+           <div class="flex flex-col gap-2 mt-8">
+            <label class="text-2xl text-blue-400">Note Description</label>
+            <textarea name="content" class="bg-gray-700 border border-gray-600 rounded-md py-2 px-3 text-xl text-gray-100 resize-none h-32 focus:outline-none focus:border-blue-500" placeholder="Note Description"></textarea>
+           </div>
+           <input type="submit" value="Create Note" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mt-8 cursor-pointer transition duration-300 w-full">
+        </form>
+    </div>
+</body>
+</html>
